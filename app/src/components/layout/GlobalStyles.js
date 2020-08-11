@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
+import 'typeface-inter'
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --primary: #fcd5ce;
+    --font: 'Inter', sans-serif;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -17,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: bisque;
-    font-family: 'Inter', sans-serif;
+    color: #1a2a3a;
+    font-family: var(--font);
     font-size: 1.8rem;
   }
 

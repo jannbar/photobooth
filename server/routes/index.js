@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const router = express.Router()
 
@@ -6,13 +8,9 @@ router.get('/', (req, res) => {
   res.send('up & running baby!')
 })
 
-// LATEST PICTURE
-router.get('/latest', (req, res) => {
-  res
-    .status(200)
-    .send(
-      'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-    )
+// COUPLE NAMES
+router.get('/couple', (req, res) => {
+  res.status(200).json({ couple: `${process.env.GROOM} & ${process.env.BRIDE}` })
 })
 
 module.exports = router
