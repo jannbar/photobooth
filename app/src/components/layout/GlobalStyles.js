@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
-import 'typeface-inter'
+import 'typeface-ibm-plex-mono'
 
 const GlobalStyle = createGlobalStyle`
   :root {
     --primary: #fcd5ce;
-    --font: 'Inter', sans-serif;
+    --font: 'IBM Plex Mono', sans-serif;
   }
 
   * {

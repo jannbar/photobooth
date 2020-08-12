@@ -10,7 +10,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
-    "typeface-bad-script": "^0.0.72",
+    "typeface-ibm-plex-mono": "^0.0.61",
     "typeface-inter": "^3.12.0"
   },
   "scripts": {
