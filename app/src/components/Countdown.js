@@ -9,11 +9,8 @@ const Letter = styled.span`
 const Countdown = () => {
   const [countdown, setCountdown] = useState(5)
 
-  // Add random face emoji
-
   useEffect(() => {
     const timer = setInterval(() => {
-      console.log(countdown)
       if (countdown > 1) {
         setCountdown((countdown) => countdown - 1)
       } else {

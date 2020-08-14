@@ -68,7 +68,7 @@ const Footer = () => (
   </FooterLayout>
 )
 
-const Layout = ({ couple, children }) => (
+const Layout = ({ children }) => (
   <Container className='layout-container'>
     <GlobalStyles />
     <Header />
