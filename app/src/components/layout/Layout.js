@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import GlobalStyles from './GlobalStyles'
@@ -30,28 +30,18 @@ const HeaderLayout = styled.header`
   }
 `
 
-const Header = () => {
-  const [couple, setCouple] = useState(null)
-
-  useEffect(() => {
-    fetch('http://localhost:3001/api/couple')
-      .then((res) => res.json())
-      .then((res) => setCouple(res.couple))
-  }, [])
-
-  return (
-    <HeaderLayout>
-      <Wrapper>
-        <span className='logo'>
-          {couple}{' '}
-          <span role='img' aria-label='kissing couple'>
-            👩‍❤️‍💋‍👨
-          </span>
+const Header = () => (
+  <HeaderLayout>
+    <Wrapper>
+      <span className='logo'>
+        Jan-Philipp & Janina{' '}
+        <span role='img' aria-label='kissing couple'>
+          👩‍❤️‍💋‍👨
         </span>
-      </Wrapper>
-    </HeaderLayout>
-  )
-}
+      </span>
+    </Wrapper>
+  </HeaderLayout>
+)
 
 const FooterLayout = styled.footer`
   font-size: 1.6rem;
@@ -61,10 +51,10 @@ const FooterLayout = styled.footer`
 
 const Footer = () => (
   <FooterLayout>
+    Pack dein schönstes Lächeln aus und mach ein Bild{' '}
     <span role='img' aria-label='emoji'>
-      👾
-    </span>{' '}
-    built with love
+      😄
+    </span>
   </FooterLayout>
 )
 

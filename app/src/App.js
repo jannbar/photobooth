@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components'
 
 import Layout from './components/layout/Layout'
 import Countdown from './components/Countdown'
-import RandomPose from './components/RandomPose'
 
 const Container = styled.div`
   height: 100%;
@@ -64,11 +63,10 @@ const App = () => {
   }
 
   return (
-    <Layout couple='Jannik & Elena'>
+    <Layout>
       <Container>
         {showCountdown ? (
           <div style={{ textAlign: 'center' }}>
-            <RandomPose />
             <Countdown />
           </div>
         ) : (
@@ -76,7 +74,7 @@ const App = () => {
             <span className='left-hand' role='img' aria-label='finger pointing to the right'>
               👉🏼
             </span>{' '}
-            Drück mich!{' '}
+            Hier drücken{' '}
             <span className='right-hand' role='img' aria-label='finger pointing to the left'>
               👈🏼
             </span>

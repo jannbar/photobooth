@@ -6,23 +6,42 @@ const Letter = styled.span`
   font-weight: 700;
 `
 
+const Cheese = styled.span`
+  font-size: 16rem;
+  font-weight: 700;
+`
+
 const Countdown = () => {
-  const [countdown, setCountdown] = useState(5)
+  const [countdown, setCountdown] = useState(10)
+  const [finished, setFinished] = useState(false)
 
   useEffect(() => {
+    const shoot = async () => {
+      try {
+        setFinished(true)
+        await fetch('http://192.168.178.88:1234/shoot')
+
+        setTimeout(() => {
+          window.location.reload()
+        }, 2000)
+      } catch (err) {
+        alert(err)
+      }
+    }
+
     const timer = setInterval(() => {
-      if (countdown > 1) {
-        setCountdown((countdown) => countdown - 1)
+      if (countdown === 1) {
+        shoot()
+        clearInterval(timer)
       } else {
-        setCountdown('Cheeese!')
-        return
+        setCountdown((countdown) => countdown - 1)
       }
     }, 1000)
 
     return () => clearInterval(timer)
   }, [countdown])
 
-  return <Letter>{countdown}</Letter>
+  return <div>{finished ? <Cheese>Cheeese!</Cheese> : <Letter>{countdown}</Letter>}</div>
 }
 
 export default Countdown
