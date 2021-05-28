@@ -34,7 +34,7 @@ const Header = () => (
   <HeaderLayout>
     <Wrapper>
       <span className='logo'>
-        Jan-Philipp & Janina{' '}
+        Elena & Jannik{' '}
         <span role='img' aria-label='kissing couple'>
           👩‍❤️‍💋‍👨
         </span>

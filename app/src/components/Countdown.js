@@ -19,7 +19,7 @@ const Countdown = () => {
     const shoot = async () => {
       try {
         setFinished(true)
-        await fetch('http://192.168.178.88:1234/shoot')
+        await fetch('http://192.168.0.100:1234/shoot')
 
         setTimeout(() => {
           window.location.reload()
